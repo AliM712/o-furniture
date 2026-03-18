@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candles store| O F. Proposal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0d0e12; color: #f3f4f6; }
+        .glass-nav { backdrop-filter: blur(12px); background: rgba(13,14,18,0.8); border-bottom: 1px solid #1f2937; }
+        
+        /* Image Wrapper & Hover */
+        .img-wrapper { overflow: hidden; border-radius: 1rem; border: 1px solid #1f2937; background: #161a22; cursor: zoom-in; }
+        .img-wrapper img { transition: transform 0.7s ease; width: 100%; height: 100%; object-fit: cover; }
+        .img-wrapper:hover img { transform: scale(1.05); }
+
+        /* Lightbox Overlay Styles */
+        #lightbox { display: none; position: fixed; z-index: 100; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 11, 15, 0.95); align-items: center; justify-content: center; padding: 40px; }
+        #lightbox img { max-width: 100%; max-height: 90vh; border-radius: 8px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+        #lightbox:target { display: flex; } /* Simplest way to trigger it */
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- NAVIGATION -->
+    <nav class="glass-nav fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center">
+        <a href="../../index.html" class="text-xs font-mono tracking-widest text-gray-400 hover:text-blue-500 transition">← BACK TO GALLERY</a>
+        <div class="text-xl font-bold tracking-tighter text-white uppercase">O <span class="text-blue-500 text-sm italic text-transform:lowercase">Furniture</span></div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-32">
+        <header class="mb-20">
+            <span class="text-blue-500 font-mono text-sm mb-3 block uppercase tracking-[0.2em]">// Selected Sample</span>
+            <h1 class="text-6xl md:text-8xl font-bold mb-8 tracking-tighter">Candles store.</h1>
+        </header>
+
+        <!-- IMAGE GALLERY GRID -->
+        <section class="grid grid-cols-12 gap-6 md:gap-8">
+            <!-- IMAGE 1 -->
+            <div class="col-span-12 md:col-span-8 img-wrapper aspect-[16/10]" onclick="openLightbox(this)">
+                <img src="3.webp" alt="Furniture Hero View">
+            </div>
+            <!-- IMAGE 2 -->
+            <div class="col-span-12 md:col-span-4 img-wrapper aspect-[3/4]" onclick="openLightbox(this)">
+                <img src="2.webp" alt="Texture Detail">
+            </div>
+            <!-- IMAGE 3 -->
+            <div class="col-span-12 md:col-span-5 img-wrapper aspect-[4/3] md:-mt-20" onclick="openLightbox(this)">
+                <img src="1.webp" alt="Mobile Experience">
+            </div>
+            <!-- IMAGE 4 -->
+
+        </section>
+    </main>
+
+    <!-- LIGHTBOX ELEMENT -->
+    <div id="lightbox" onclick="this.style.display='none'">
+        <span class="absolute top-10 right-10 text-white text-3xl cursor-pointer font-light">&times;</span>
+        <img id="lightbox-img" src="" alt="Full View">
+    </div>
+
+    <!-- LIGHTBOX SCRIPT -->
+    <script>
+        function openLightbox(element) {
+            const imgSrc = element.querySelector('img').src;
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+        
+        // Close on 'Esc' key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") document.getElementById('lightbox').style.display = 'none';
+        });
+    </script>
+
+    <footer class="p-10 text-center text-gray-800 font-mono text-[10px] uppercase tracking-widest">
+        O Furniture / Online Store. Pure Performance.
+    </footer>
+
+</body>
+</html>

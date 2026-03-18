@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Furniture | samples</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0d0e12; color: #f3f4f6; }
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; }
+        
+        /* Card Styling */
+        .card-inner { 
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); 
+            border: 1px solid #1f2937; 
+            overflow: hidden; 
+            background: #0d0e12;
+        }
+        .card-inner:hover { border-color: #3b82f6; transform: translateY(-8px); background: #161a22; }
+
+        /* Image Container */
+        .image-box { 
+            position: relative; 
+            width: 100%; 
+            height: 260px; 
+            overflow: hidden; 
+            background-color: #1a1c23; 
+        }
+        .image-box img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transition: transform 0.6s ease; 
+        }
+        .card-inner:hover .image-box img { transform: scale(1.1); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="max-w-7xl mx-auto px-6 py-12 flex justify-between items-center">
+        <div class="text-3xl font-light tracking-[0.2em] uppercase text-white">O <span class="font-bold text-blue-500">FURNITURE</span></div>
+        <div class="space-x-8 hidden md:flex font-mono text-xs uppercase tracking-widest text-gray-500">
+ 
+        </div>
+    </nav>
+
+    <header class="max-w-7xl mx-auto px-6 mb-20">
+        <p class="text-blue-500 font-mono text-sm mb-4 uppercase tracking-widest">// Selected Samples 2026</p>
+        <h1 class="text-5xl md:text-7xl font-bold max-w-4xl leading-tight text-white">
+            Digital craftsmanship for <span class="text-gray-500 italic text-gray-500">online success.</span>
+        </h1>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pb-32">
+        <div class="project-grid">
+            
+            <a href="projects/project-1/" class="card-inner rounded-2xl group flex flex-col">
+                <div class="image-box">
+                    <img src="projects/project-1/3.webp" alt="The Velvet Collection">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0d0e12]/90 to-transparent p-6 flex justify-between items-start">
+                        <span class="text-white font-mono text-xs bg-blue-600 px-2 py-1 rounded">01</span>
+                        <div class="text-blue-400 opacity-0 group-hover:opacity-100 transition translate-x-2 group-hover:translate-x-0 font-bold">VIEW →</div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2 text-white">Garden kits store</h3>
+                    <div class="pt-6 border-t border-gray-800 flex gap-4">
+                        <span class="bg-gray-900 px-3 py-1 rounded text-[10px] font-bold text-gray-400 uppercase tracking-widest">E-commerce</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="projects/project-2/" class="card-inner rounded-2xl group flex flex-col">
+                <div class="image-box">
+                    <img src="projects/project-2/1.webp" alt="Workspace Elite">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0d0e12]/90 to-transparent p-6 flex justify-between items-start">
+                        <span class="text-white font-mono text-xs bg-blue-600 px-2 py-1 rounded">02</span>
+                        <div class="text-blue-400 opacity-0 group-hover:opacity-100 transition translate-x-2 group-hover:translate-x-0 font-bold">VIEW →</div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2 text-white">Dogs kits store</h3>
+                    <div class="pt-6 border-t border-gray-800 flex gap-4">
+                        <span class="bg-gray-900 px-3 py-1 rounded text-[10px] font-bold text-gray-400 uppercase tracking-widest">E-commerce</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="projects/project-3/" class="card-inner rounded-2xl group flex flex-col">
+                <div class="image-box">
+                    <img src="projects/project-3/2.webp" alt="Nordic Minimal">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0d0e12]/90 to-transparent p-6 flex justify-between items-start">
+                        <span class="text-white font-mono text-xs bg-blue-600 px-2 py-1 rounded">03</span>
+                        <div class="text-blue-400 opacity-0 group-hover:opacity-100 transition translate-x-2 group-hover:translate-x-0 font-bold">VIEW →</div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2 text-white">Candles store</h3>
+                    <div class="pt-6 border-t border-gray-800 flex gap-4">
+                        <span class="bg-gray-900 px-3 py-1 rounded text-[10px] font-bold text-gray-400 uppercase tracking-widest">E-commerce</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="projects/project-4/" class="card-inner rounded-2xl group flex flex-col">
+                <div class="image-box">
+                    <img src="projects/project-4/1.webp" alt="Delivery Matrix">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0d0e12]/90 to-transparent p-6 flex justify-between items-start">
+                        <span class="text-white font-mono text-xs bg-blue-600 px-2 py-1 rounded">04</span>
+                        <div class="text-blue-400 opacity-0 group-hover:opacity-100 transition translate-x-2 group-hover:translate-x-0 font-bold">VIEW →</div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2 text-white">Evansville roofers</h3>
+                    <div class="pt-6 border-t border-gray-800 flex gap-4">
+                        <span class="bg-gray-900 px-3 py-1 rounded text-[10px] font-bold text-gray-400 uppercase tracking-widest">Static</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="projects/project-5/" class="card-inner rounded-2xl group flex flex-col">
+                <div class="image-box">
+                    <img src="projects/project-5/1.webp" alt="Virtual Atelier">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0d0e12]/90 to-transparent p-6 flex justify-between items-start">
+                        <span class="text-white font-mono text-xs bg-blue-600 px-2 py-1 rounded">05</span>
+                        <div class="text-blue-400 opacity-0 group-hover:opacity-100 transition translate-x-2 group-hover:translate-x-0 font-bold">VIEW →</div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2 text-white">U break WE fix</h3>
+                    <div class="pt-6 border-t border-gray-800 flex gap-4">
+                        <span class="bg-gray-900 px-3 py-1 rounded text-[10px] font-bold text-gray-400 uppercase tracking-widest">Static</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="projects/project-6/" class="card-inner rounded-2xl group flex flex-col">
+                <div class="image-box">
+                    <img src="projects/project-6/1.webp" alt="The Lookbook">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0d0e12]/90 to-transparent p-6 flex justify-between items-start">
+                        <span class="text-white font-mono text-xs bg-blue-600 px-2 py-1 rounded">06</span>
+                        <div class="text-blue-400 opacity-0 group-hover:opacity-100 transition translate-x-2 group-hover:translate-x-0 font-bold">VIEW →</div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2 text-white">Sleep hippo</h3>
+                    <div class="pt-6 border-t border-gray-800 flex gap-4">
+                        <span class="bg-gray-900 px-3 py-1 rounded text-[10px] font-bold text-gray-400 uppercase tracking-widest">Static</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <footer class="p-12 text-center text-gray-700 font-mono text-xs uppercase tracking-widest border-t border-gray-900">
+        O Furniture / Online Store. Pure Performance.
+    </footer>
+
+</body>
+</html>
